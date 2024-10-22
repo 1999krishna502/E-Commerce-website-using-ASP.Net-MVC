@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center; /* Center align the main heading */
+    font-size: 2.5em;
+    color: #333; /* Dark gray color */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+h2 {
+    text-align: center; /* Center align the subheading */
+    font-size: 2em;
+    color: #007bff; /* Bootstrap primary color */
+    margin: 20px 0; /* Space above and below */
+}
+
+p {
+    text-align: center; /* Center align paragraphs */
+    font-size: 1.1em; /* Slightly larger font size */
+    color: #555; /* Medium gray color */
+}
+
+.products {
+    display: flex; /* Use flexbox for responsive layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center align products */
+    margin-top: 30px; /* Space above products section */
+}
+
+.card {
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Inner padding reduced */
+    margin: 10px; /* Space between cards */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Deeper shadow for a floating effect */
+    width: calc(25% - 20px); /* Responsive width for 4 cards per row */
+    text-align: center; /* Center align text in cards */
+    background-color: #fff; /* White background */
+    transition: transform 0.2s, box-shadow 0.2s; /* Animation on hover */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift card effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.card img {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for images */
+    max-height: 150px; /* Reduce max height for images */
+    object-fit: cover; /* Cover the area without distortion */
+}
+
+.card h3 {
+    font-size: 1.2em; /* Adjust title size to fit smaller card */
+    margin: 8px 0; /* Space above and below title */
+    color: #333; /* Dark gray color */
+}
+
+.card p {
+    font-size: 1.1em; /* Slightly larger font size for price */
+    color: #b12704; /* Amazon red color for price */
+    margin: 5px 0; /* Space around price */
+}
+
+.card button {
+    background-color: #ffa41c; /* Amazon button color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    padding: 8px 12px; /* Reduced padding for buttons */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 8px; /* Space above button */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth color change and scale */
+}
+
+.card button:hover {
+    background-color: #ff8c00; /* Darker orange on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.card input[type="number"] {
+    width: 50px; /* Fixed width for quantity input */
+    margin-right: 5px; /* Space between input and button */
+    padding: 5px; /* Inner padding for better UX */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ddd; /* Light border */
+    outline: none; /* Remove outline */
+}
+
+.card input[type="number"]:focus {
+    border-color: #007bff; /* Blue border on focus */
+}

@@ -1,0 +1,74 @@
+   /* order-confirmation.css */
+
+   body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9; /* Light background color */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the container */
+    background-color: #fff; /* White background for the card */
+    padding: 20px; /* Inner padding */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+h1 {
+    text-align: center; /* Center align heading */
+    font-size: 2.5em; /* Main heading size */
+    color: #333; /* Dark gray color */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.thank-you {
+    text-align: center; /* Center align thank you message */
+    font-size: 1.2em; /* Slightly larger font size */
+    color: #007bff; /* Bootstrap primary color */
+    margin-bottom: 20px; /* Space below message */
+}
+
+h2 {
+    font-size: 2em; /* Subheading size */
+    color: #555; /* Medium gray color */
+    margin-top: 30px; /* Space above */
+}
+
+.order-details {
+    background-color: #f2f2f2; /* Light gray background */
+    padding: 10px; /* Inner padding */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below */
+}
+
+.order-items {
+    list-style-type: none; /* Remove default list style */
+    padding: 0; /* Remove padding */
+}
+
+.order-items li {
+    padding: 8px 0; /* Space above and below list items */
+    border-bottom: 1px solid #ddd; /* Light gray border below items */
+}
+
+.order-items li:last-child {
+    border-bottom: none; /* Remove border for last item */
+}
+
+.continue-shopping {
+    display: block; /* Make the link a block for full-width */
+    text-align: center; /* Center align the link */
+    margin-top: 20px; /* Space above the link */
+    padding: 10px 15px; /* Padding for the button */
+    background-color: #007bff; /* Button color */
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth color change */
+}
+
+.continue-shopping:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

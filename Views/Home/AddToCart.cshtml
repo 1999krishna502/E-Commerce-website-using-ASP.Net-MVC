@@ -1,0 +1,16 @@
+@model MyNewProject.Models.AddToCartViewModel
+
+<h2>Add to Cart</h2>
+
+<div>
+    <img src="@Model.ImageUrl" alt="@Model.ProductName" style="max-width: 150px;" />
+    <p>Product Name: @Model.ProductName</p>
+    <p>Price: @Model.Price</p>
+    <p>Description: @Model.Description</p>
+    <form asp-action="AddToCart" method="post">
+        <input type="hidden" asp-for="ProductId" />
+        <label>Quantity:</label>
+        <input asp-for="Quantity" />
+        <button type="submit">Add to Cart</button>
+    </form>
+</div>

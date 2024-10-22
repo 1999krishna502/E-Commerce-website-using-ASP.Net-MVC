@@ -1,0 +1,29 @@
+@model MyNewProject.Models.LoginViewModel
+
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+
+<form asp-action="Login" method="post">
+    <h2>Login</h2>
+    <div class="form-group">
+        <label asp-for="Email" class="control-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Password" class="control-label"></label>
+        <input asp-for="Password" type="password" class="form-control" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Log in" class="btn btn-primary" />
+    </div>
+</form>
+
+<div>
+    <a asp-action="Register">Register</a>
+</div>

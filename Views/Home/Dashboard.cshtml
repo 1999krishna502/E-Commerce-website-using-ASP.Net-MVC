@@ -1,0 +1,28 @@
+@model MyNewProject.Models.DashboardViewModel
+<link rel="stylesheet" href="~/css/dashboard.css" />
+
+<h1>Welcome, @Model.FirstName @Model.LastName</h1>
+    <p>Email: @Model.Email</p>
+    <p>Address: @Model.AddressLine1, @Model.AddressLine2, @Model.City, @Model.State, @Model.ZipCode, @Model.Country</p>
+
+    <h2>Available Products</h2>
+    <div class="products">
+        @foreach (var product in Model.Products)
+        {
+            <div class="card">
+                <img src="@product.ImagePath" alt="@product.ProductName" />
+                <h3>@product.ProductName</h3>
+                <p>Price: @product.Price.ToString("C")</p>
+                <form method="post" action="@Url.Action("AddToCart", "Home")">
+                    <input type="hidden" name="productId" value="@product.Id" />
+                    <input type="number" name="quantity" value="1" min="1" />
+                    <input type="submit" value="Add to Cart" />
+                </form>
+                <form method="post" action="@Url.Action("BuyNow", "Home")">
+                    <input type="hidden" name="productId" value="@product.Id" />
+                   
+                    <input type="submit" value="Buy Now" />
+                </form>
+            </div>
+        }
+    </div>

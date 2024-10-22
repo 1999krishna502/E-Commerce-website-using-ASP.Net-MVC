@@ -1,0 +1,24 @@
+@model MyNewProject.Models.Order
+<link rel="stylesheet" href="~/css/order-confirmation.css" />
+
+<h1>Order Confirmation</h1>
+<p>Thank you for your purchase!</p>
+
+<h2>Order Details</h2>
+<p>Order ID: @Model.Id</p>
+<p>Order Date: @Model.OrderDate.ToString("g")</p>
+<p>Total Amount: @Model.TotalAmount.ToString("C")</p>
+
+<h3>Items:</h3>
+<ul>
+    @foreach (var item in Model.OrderItems)
+    {
+        <li>
+            <strong>@item.Product?.ProductName</strong> (Product ID: @item.ProductId) - 
+            Quantity: @item.Quantity, 
+            Price: @item.Price.ToString("C")
+        </li>
+    }
+</ul>
+
+<a href="@Url.Action("Index", "Home")">Continue Shopping</a>
